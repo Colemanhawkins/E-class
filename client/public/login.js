@@ -41,6 +41,7 @@ server.post('/refreshToken', (req, res) => {
             expiresIn: data.body.expires_in
         })
     }).catch( (err) =>{
+        console.log(err)
         res.status(400).send(err)
     })
 })

@@ -1,9 +1,11 @@
 import {combineReducers} from 'redux';
-import codeReducer from './Code';
+import historyReducer from './history';
+import infoReducer from './info';
 
 //union de reducers
 const rootReducer = combineReducers({
-    code: codeReducer,
+    history: historyReducer,
+    info: infoReducer
 });
 
 export default rootReducer;

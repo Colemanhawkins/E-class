@@ -1,2 +1,2 @@
-export const CREATE_CODE = 'CREATE_CODE';
+export const ADD_HISTORY_ID = 'ADD_HISTORY_ID'
 

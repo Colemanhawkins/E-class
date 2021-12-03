@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import AuthUrl from '../../utils/AuthUrl.js';
+import AuthUrl from '../../services/AuthUrl.js';
 import { Container } from 'react-bootstrap';
 
 const Login = () => {

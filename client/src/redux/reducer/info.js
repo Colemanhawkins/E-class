@@ -2,21 +2,22 @@ import * as types from '../actions/actionTypes'
 //estado inicial
 const initialState = {
     loading: true,
-    code: [],
+    albumsInfo: [],
+    artistsInfo: [],
     error: false
 }
 //reducer
-const codeReducer = (state = initialState , action) => {
+const infoReducer = (state = initialState , action) => {
     switch (action.type) {       
-        case  types.CREATE_CODE:
+        case  types.ADD_HISTORY_ID:
             return {
                 ...state,
                 loading : false,
-                code: action.payload,
+                error: action.payload,
             }
             default:
                 return state;
     }
 };
 
-export default codeReducer;
+export default infoReducer;

@@ -1,7 +1,7 @@
 import * as types from './actionTypes.js';
 
-export const createCode = (code) => ({
-   type : types.CREATE_CODE,
-   payload:  code
+export const AddHistoryId = (id) => ({
+   type : types.ADD_HISTORY_ID,
+   payload:  id
 })
 
