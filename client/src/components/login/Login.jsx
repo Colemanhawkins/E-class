@@ -1,21 +1,21 @@
-import React from 'react'
-import { Container } from 'react-bootstrap';
+import React, { useEffect } from 'react';
 import AuthUrl from '../../utils/AuthUrl.js';
-import {useDispatch , useSelector} from 'react-redux';
-import  {createCode} from '../../redux/actions/actions.js'
+import { Container } from 'react-bootstrap';
 
 const Login = () => {
-    const state = useSelector((state) => ({...state.code}));
-    console.log(state.loading);
-    //a
-    //uso dispatch
-    const dispatch = useDispatch();
     //una vez obtenido el codigo redirecciono a mi siguiente componente
     const code = new URLSearchParams(window.location.search).get('code');
-    if(code && state.loading === true) {
-        dispatch(createCode(code))
-        // window.location.href = '/dashboard';
-    }
+        
+    useEffect(() => {
+        //si la url fue modificada y el codigo ya ha sido almacenado en una variable la almaceno en localstorage
+        //no es material sencible y la api ya de por si la brinda por una url 
+        if(code) {
+            localStorage.setItem('Code', code);
+            window.location.href = '/dashboard';
+        }
+
+    }, [code])
+    
 
     return (
         <Container
@@ -29,4 +29,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Login;

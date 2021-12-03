@@ -5,10 +5,11 @@ var cors = require('cors');
 const path = require('path');
 
 require('./db.js');
-
+//inicializo servidor
 const server = express();
 
 server.name = 'API';
+//middlewares
 server.use(cors());
 server.use(morgan('dev'));
 server.use((req, res, next) => {
