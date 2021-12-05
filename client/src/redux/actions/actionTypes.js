@@ -1,2 +1,5 @@
 export const ADD_HISTORY_ID = 'ADD_HISTORY_ID'
 
+export const CREATE_TOKEN = 'CREATE_TOKEN'
+
+export const REFRESH_TOKEN = 'REFRESH_TOKEN'

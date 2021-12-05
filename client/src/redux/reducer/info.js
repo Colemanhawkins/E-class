@@ -2,6 +2,7 @@ import * as types from '../actions/actionTypes'
 //estado inicial
 const initialState = {
     loading: true,
+    tracksInfo: [],
     albumsInfo: [],
     artistsInfo: [],
     error: false

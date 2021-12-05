@@ -9,11 +9,17 @@ const initialState = {
 //reducer
 const historyReducer = (state = initialState , action) => {
     switch (action.type) {       
-        case  types.ADD_HISTORY_ID:
+        case  types.CREATE_TOKEN:
             return {
                 ...state,
                 loading : false,
-                history: action.payload,
+                token: action.payload,
+            }
+        case types.REFRESH_TOKEN:
+            return {
+                ...state,
+                loading:false,
+                token: action.payload
             }
             default:
                 return state;

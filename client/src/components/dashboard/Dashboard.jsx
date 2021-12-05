@@ -4,17 +4,19 @@ import {Container , Form } from 'react-bootstrap';
 import SpotifyWebApi from 'spotify-web-api-node';
 import TrackSearchResult from '../trackItem/TrackSearchResult';
 import Player from '../player/Player.jsx';
+import { useSelector } from "react-redux";
 
 const Dashboard = () => {
     //instanceo la api
     const spotifyApi = new SpotifyWebApi({
         clientId: process.env.REACT_APP_CLIENT_ID
     });
+    const accessTokenlocal = useSelector((state) => state.history.token.access_token)  ;
     //aqui obtengo el codigo de mi primera token para luego solicitar
     //el token de permiso
     const code = localStorage.getItem('Code');
-    //aqui lo mando a crear en mi utils que solicita luego a mi api
-    const accessToken = UseAuth(code);
+    //aqui lo mando a crear en mi utils que solicita luego a mi api;
+    let accessToken = accessTokenlocal ? accessTokenlocal : UseAuth(code);
     //parametros de busqueda del input
     const [search , setSearch] = useState("");
     //resultados
@@ -37,12 +39,11 @@ const Dashboard = () => {
         // espere a terminar para culminar con la busqueda
         let cancel = false;
         //todo esto deberia estar dentro de un action en donde se buscan canciones
-
         //seteo el acceso al token para poder acceder 
         //a las peticiones de la api
         spotifyApi.setAccessToken(accessToken);
         //busco solo las canciones;
-        spotifyApi.searchTracks(search).then((res) => {
+        spotifyApi.searchTracks(search ,{ limit: 5, offset: 0 }).then((res) => {
             //si no llego a terminar la busqueda y setearse el switch
             // corto la ejecuccion en este punto
             if(cancel) return;
@@ -65,9 +66,13 @@ const Dashboard = () => {
         .catch((err) => {
             console.log(err);
         })
+        
+       console.log(spotifyApi.searchAlbums(search, { limit: 5, offset: 0 }).then((res) =>{
+           console.log(res.body)
+       }))
         //switcheo el cancel para que  pueda haber una nueva busqueda 
         return () => (cancel = true)
-    }, [search,accessToken]);
+    }, [search]);
 
     return (
         <Container className="d-flex flex-column py-2" style={{
