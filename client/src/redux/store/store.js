@@ -10,7 +10,7 @@ import storage from 'redux-persist/lib/storage';
 const persistConfig = {
   key: 'history',
   storage: storage,
-  whitelist: ['history'] // which reducer want to store
+  whitelist: ['history'] // que va a persistir en la sesion
 };
 //seteo configuracion de redux- persist
 const persistedReducer = persistReducer(persistConfig, rootReducer);
