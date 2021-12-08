@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import AuthUrl from '../../services/AuthUrl.js';
 import { useDispatch } from 'react-redux';
 import { createCode , clearLocal } from '../../redux/actions/actions.js';

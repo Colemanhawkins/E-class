@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200&display=swap');
+
+.case_container {
+    border: 3px solid #252323;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    padding: 1em;
+  }
+  
+  .track_data {
+    font-family: "Heebo", Arial, Helvetica, sans-serif;
+    margin-left: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .track_title {
+    margin: 0;
+    margin-bottom: 0.512em;
+    font-size: 1.563rem;
+  }
+  
+  .track_description {
+    margin: 0;
+    margin-bottom: auto;
+    font-size: 1em;
+  }
+
+  .track_img {
+    max-width: 250px;
+    max-height: 150px;
+    width: 100%;
+    outline: auto;
+    object-fit: cover
+  }
+  
+  
+  .img_data {
+    max-width: 250px;
+    max-height: 150px;
+    width: 100%;
+    object-fit: cover
+  }

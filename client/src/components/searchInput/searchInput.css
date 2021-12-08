@@ -3,6 +3,7 @@ body {
 	padding: 0;
 }
 
+
 .search-box {
 	clear: none;
 	background: #2f3640;
@@ -13,26 +14,28 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+
 .search-btn {
 	color: rgb(51, 177, 62);
 	float: right;
 	width: 20px;
 	height: 20px;
+	border: none;
+    outline:none;
 	border-radius: 50%;
 	background: #2f3640;
 	display: flex;
 	justify-content: center;
 	align-items: center;
     text-decoration: none;
+	cursor: pointer;
 }
-
 
 
 .search-box:hover > .search-input {
 	width: 270px;
     padding: 0 6px;
 }
-
 
 
 .search-input {

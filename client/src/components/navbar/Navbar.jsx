@@ -2,19 +2,20 @@ import React from 'react';
 import SearchInput from '../searchInput/SearchInput.jsx';
 import './navbar.css';
 
+//una simple barra de navegacion sin logica por detras
 const Navbar = () => {
     return (
     	<React.Fragment>
-			<header class="container">
+			<header className="container">
 				<nav>
 					<ul>
 						<li>
-							<a href="#" class="active">
+							<a href="/home" className="Home active">
 								Home
 							</a>
 						</li>
 						<li>
-							<a href="#">History</a>
+							<a href="/history" className="History">History</a>
 						</li>
 					</ul>
 					<SearchInput />

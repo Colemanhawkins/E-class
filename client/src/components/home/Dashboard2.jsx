@@ -31,8 +31,8 @@
     // const chooseTrack = (track) => {
     //     setPlayingTrack(track);
     // }
-    //usamos un useEffect para cuando se seteen cambios en search se ejecute
-    //la busqueda
+    // usamos un useEffect para cuando se seteen cambios en search se ejecute
+    // la busqueda
     // useEffect(() => {
     //     //si no tengo absolutamente nada en la busqueda lo seteo
     //     //como un array vacio

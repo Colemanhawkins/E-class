@@ -59,5 +59,6 @@ display: flex;
 
 .btn:hover {
 	background:  rgb(70, 175, 179);
-	cursor: pointer;
+    color: #fff;
+    transition: 1s;
 }

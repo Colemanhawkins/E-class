@@ -1,4 +1,6 @@
-export const ADD_TRACKS = 'ADD_TRACKS'
+export const ADD_RESULTS_SUCCESS = 'ADD_RESULTS_SUCCESS'
+
+export const ADD_RESULTS_GET = 'ADD_RESULTS_GET'
 
 export const CREATE_TOKEN = 'CREATE_TOKEN'
 
