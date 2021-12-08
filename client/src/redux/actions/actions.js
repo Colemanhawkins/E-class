@@ -67,7 +67,7 @@ export const searchResults = (search , accessToken) =>  (dispatch) => {
       spotifyApi.searchTracks(search ,{ limit: 5, offset: 0 }).then((res) => {
          //doi formato a los tracks
          const tracks = (res.body.tracks.items.map((track) => {
-            const mediumAlbumImage = track.album.images[1].url
+            const mediumAlbumImage =  track.album.images.length !==0 ?track.album.images[1].url : null;
                return {
                      artist: track.artists[0].name,
                      title: track.name,
@@ -76,12 +76,11 @@ export const searchResults = (search , accessToken) =>  (dispatch) => {
                }
             }))
          //busco los albumnes   
-         spotifyApi.searchAlbums(search , { limit: 5 , offset: 0}).then((res) => {
+         spotifyApi.searchAlbums(search , { limit: 3 , offset: 0}).then((res) => {
             //doi formato a los albums
-            console.log(res.body)
             //formateo los artistas dentro del album
             const albums = (res.body.albums.items.map((album) => {
-               const mediumAlbumImage = album.images[1].url;
+               const mediumAlbumImage = album.images.length !== 0 ? album.images[1].url : null
                const artists = album.artists.map((artist) => {
                   return artist.name
                })
@@ -95,9 +94,8 @@ export const searchResults = (search , accessToken) =>  (dispatch) => {
             //busco los artistas
             spotifyApi.searchArtists(search , {limit: 2 , offset: 0}).then((res) => {
                //doi formato a los artistas
-                  console.log(res.body)
                const artists = (res.body.artists.items.map((artist) => {
-                  const mediumArtistImage = artist.images[1].url;
+                  const mediumArtistImage = artist.images.length !== 0 ? artist.images[1].url : null
                   return{
                         name: artist.name,
                         image: mediumArtistImage,
@@ -123,7 +121,13 @@ export const searchResults = (search , accessToken) =>  (dispatch) => {
       })
 }
 
-// export const AddHistoryId = (id) => ({
-//    type : types.ADD_HISTORY_ID,
-//    payload:  id
-// })
+export const currentTrack = (track) => ({
+      type: types.CURRENT_TRACK,
+      payload: track
+   })
+
+
+export const addTrackToHistory = (track) => ({
+   type : types.ADD_HISTORY_TRACK,
+   payload:  track
+})

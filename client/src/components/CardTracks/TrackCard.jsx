@@ -1,19 +1,24 @@
+import albumNotFound from '../../images/albumNotFound.jpg';
+import { currentTrack  ,addTrackToHistory } from '../../redux/actions/actions';
+import { useDispatch } from 'react-redux';
 import React from 'react';
 import './trackCard.css';
-import imageNotFound from '../../images/imageNotFound.png';
 
-const TrackCard = ( {track, chooseTrack }) => {
-
-    // const handlePlay = () => {
-    //     chooseTrack(track)
-    // }    
+const TrackCard = ( {track }) => {
+    //dispatch
+    const dispatch = useDispatch()
+    //dipatch la cancion para que se reproduzca  en el player
+    const handlePlay = () => {
+      dispatch(currentTrack(track))
+      dispatch(addTrackToHistory(track))
+    }    
 
     return (
-            <div className="case_container">
+            <div onClick={handlePlay} className="case_container">
                     <div className="track_data">
                         <img
                         className="track_img"
-                        src={track.imageAlbum ? track.imageAlbum : imageNotFound}
+                        src={track.imageAlbum ? track.imageAlbum : albumNotFound}
                         alt="ups, somethin was wrong"
                         />
                     </div>
@@ -30,19 +35,6 @@ const TrackCard = ( {track, chooseTrack }) => {
                     </div>
                 </div>
             </div>
-
-
-        // <div 
-        // className="d-flex m-2 align-items-center"
-        // style={{cursor: 'pointer'}}
-        // onClick={handlePlay}
-        // >
-        //     <img src={track.albumUrl} style={{height: '64px' , width: '64px'}} alt="nothing" />
-        //     <div className='ml-3'>
-        //         <div>{track.title}</div>
-        //         <div className='text-muted'>{track.artist}</div>
-        //     </div>
-        // </div>
     )
 }
 

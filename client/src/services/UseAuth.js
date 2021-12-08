@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { createToken } from '../redux/actions/actions';
 
 const useAuth = async (code) => {
-    console.log('entre')
     //uso dispatch
     const dispatch = useDispatch();
     //me logeo

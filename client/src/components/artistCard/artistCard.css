@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
+
+.case_container {
+    background-color: #333;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    height: 120px;
+    margin-bottom: 15px;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .Artist_data {
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 1em;
+    margin-left: 2em;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Artist_title {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-bottom: 0.512em;
+    font-size: 1.2rem;
+  }
+  
+  .Artist_artist {
+    margin: 0;
+    color: rgb(156, 149, 149);
+    margin-bottom: auto;
+    font-size: 1em;
+  }
+
+  .Artist_img {
+    max-width: 80px;
+    max-height: 80px;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover
+  }
+  
+  
+  .img_data {
+    max-width: 150px;
+    max-height: 150px;
+    width: 100%;
+    object-fit: cover
+  }

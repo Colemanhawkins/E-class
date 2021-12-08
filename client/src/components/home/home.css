@@ -12,7 +12,17 @@ body {
     justify-content: center;
     align-items: center;
     height: 80vh;
-
 }
 
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
 
+.section-main{
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 60px;
+}

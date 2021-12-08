@@ -2,6 +2,7 @@ import * as types from '../actions/actionTypes'
 //estado inicial
 const initialState = {
     loading: false,
+    currentSong: [],
     tracks: [],
     albumsInfo: [],
     artistsInfo: [],
@@ -9,8 +10,12 @@ const initialState = {
 }
 //reducer
 const infoReducer = (state = initialState , action) => {
-    console.log(action.type)  
-    switch (action.type) { 
+    switch (action.type) {
+        case types.CURRENT_TRACK: 
+            return {
+                ...state,
+                currentSong: action.payload
+            }
         case types.ADD_RESULTS_GET:
             return {
                 ...state,
