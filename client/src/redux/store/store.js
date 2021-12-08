@@ -6,12 +6,13 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
+//le doi persistencia a solo el reducer que yo quiero
 const persistConfig = {
   key: 'history',
   storage: storage,
   whitelist: ['history'] // which reducer want to store
 };
-
+//seteo configuracion de redux- persist
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 const middleware = applyMiddleware(ReduxThunk, logger);
 const store = createStore(persistedReducer,  composeWithDevTools(middleware));

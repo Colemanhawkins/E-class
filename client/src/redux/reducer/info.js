@@ -2,7 +2,7 @@ import * as types from '../actions/actionTypes'
 //estado inicial
 const initialState = {
     loading: true,
-    tracksInfo: [],
+    tracks: [],
     albumsInfo: [],
     artistsInfo: [],
     error: false
@@ -10,11 +10,10 @@ const initialState = {
 //reducer
 const infoReducer = (state = initialState , action) => {
     switch (action.type) {       
-        case  types.ADD_HISTORY_ID:
+        case  types.ADD_TRACKS:
             return {
                 ...state,
-                loading : false,
-                error: action.payload,
+                tracks: action.payload
             }
             default:
                 return state;

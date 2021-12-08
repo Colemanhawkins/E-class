@@ -1,32 +1,42 @@
 import React, { useEffect } from 'react';
 import AuthUrl from '../../services/AuthUrl.js';
-import { Container } from 'react-bootstrap';
+import { useDispatch } from 'react-redux';
+import { createCode , clearLocal } from '../../redux/actions/actions.js';
+import logo from "../../images/logo.png";
+import './login.css';
 
 const Login = () => {
+    //uso dispatch para dispachar el codigo y tenerlo de manera persistente en el local con redux
+    const dispatch = useDispatch();
+    //limpio todo lo que tenga en caso de tener una session anterior
+    dispatch(clearLocal())
     //una vez obtenido el codigo redirecciono a mi siguiente componente
-    const code = new URLSearchParams(window.location.search).get('code');
-        
-    useEffect(() => {
-        //si la url fue modificada y el codigo ya ha sido almacenado en una variable la almaceno en localstorage
-        //no es material sencible y la api ya de por si la brinda por una url 
-        if(code) {
-            localStorage.setItem('Code', code);
-            window.location.href = '/dashboard';
-        }
-
-    }, [code])
-    
-
-    return (
-        <Container
-        className='d-flex justify-content-center align-items-center bg-image '
-        style={{ minHeight: '100vh', minWidth: '100vh' ,backgroundImage: `url('https://www.wallpaperuse.com/wallp/86-867181_m.jpg')` }}
-        >
-            <a className='btn btn-success btn-lg' href={AuthUrl}>
-              Login Spotify
-            </a>
-        </Container>
-    )
+    const code =  new URLSearchParams(window.location.search).get('code');
+    //handle para obtener el valor de  la ruta y obtener el codigo
+    const handleCode  = () => {
+        window.location.href = AuthUrl
+    }
+    //ni bien se genera el codigo en el url lo guardo y redirecciono
+    if(code){
+            dispatch(createCode(code))
+            window.location.href = './home'
+    }
+ 
+return (
+    	<React.Fragment>
+			<header className="header">
+                    <div className="content">
+                        <img src={logo} alt="none" className="img" />
+					    <h1>Spotify</h1>
+                    </div>
+                    <div>
+					    <button onClick={() => handleCode()} target="_blank" className="btn">
+						    Login
+					    </button>
+                    </div>
+			</header>
+		</React.Fragment>
+        )
 }
 
 export default Login;

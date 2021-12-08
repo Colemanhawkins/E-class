@@ -9,12 +9,12 @@ dotenv.config()
 
 //seed y provider de mi store de redux
 ReactDOM.render(
-  <React.StrictMode>
+  <>
       <Provider store={store}>
         <PersistGate persistor={persistor}>
           <App />
        </PersistGate>
       </Provider>
-  </React.StrictMode>,
+  </>,
   document.getElementById('root')
 );
