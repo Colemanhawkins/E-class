@@ -1,43 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
 
 .case_container {
-    border: 3px solid #252323;
+    background-color: #333;
     box-sizing: border-box;
     display: flex;
     width: 100%;
-    padding: 1em;
+    height: 120px;
+    margin-bottom: 15px;
+    align-items: center;
+    cursor: pointer;
   }
   
   .track_data {
-    font-family: "Heebo", Arial, Helvetica, sans-serif;
-    margin-left: 1em;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 1em;
+    margin-left: 2em;
     display: flex;
     flex-direction: column;
   }
   
   .track_title {
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
     margin-bottom: 0.512em;
-    font-size: 1.563rem;
+    font-size: 1.2rem;
   }
   
-  .track_description {
+  .track_artist {
     margin: 0;
+    color: rgb(156, 149, 149);
     margin-bottom: auto;
     font-size: 1em;
   }
 
   .track_img {
-    max-width: 250px;
-    max-height: 150px;
+    max-width: 80px;
+    max-height: 80px;
     width: 100%;
-    outline: auto;
+    border-radius: 50%;
     object-fit: cover
   }
   
   
   .img_data {
-    max-width: 250px;
+    max-width: 150px;
     max-height: 150px;
     width: 100%;
     object-fit: cover

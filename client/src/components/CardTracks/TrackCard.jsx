@@ -1,40 +1,35 @@
 import React from 'react';
-import './trackcard.css';
-import imageNotFound from '../../images/imageNotFound';
+import './trackCard.css';
+import imageNotFound from '../../images/imageNotFound.png';
 
-
-const TrackCard = ( { track , chooseTrack }) => {
+const TrackCard = ( {track, chooseTrack }) => {
 
     // const handlePlay = () => {
     //     chooseTrack(track)
     // }    
 
-    const stringArtists = track.artist.join(', ')
-
-
     return (
-
-    <div className="case_container">
-            <div className="track_data">
-                <img
-                className="track_img"
-                src={track.imageAlbum ? track.imageAlbum : imageNotFound}
-                alt="ups, somethin was wrong"
-                />
+            <div className="case_container">
+                    <div className="track_data">
+                        <img
+                        className="track_img"
+                        src={track.imageAlbum ? track.imageAlbum : imageNotFound}
+                        alt="ups, somethin was wrong"
+                        />
+                    </div>
+                <div className="track_data">
+                    <div>
+                        <p
+                        className="track_title">
+                            {track.title}
+                        </p>
+                        <p
+                        className="track_artist">
+                        Cancion - {track.artist}
+                        </p>
+                    </div>
+                </div>
             </div>
-        <div className="track_data">
-            <div>
-                <p
-                className="track_title">
-                    {track.title}
-                </p>
-                <p
-                 className="track_description">
-                Cancion - {stringArtists}
-                </p>
-            </div>
-        </div>
-    </div>
 
 
         // <div 

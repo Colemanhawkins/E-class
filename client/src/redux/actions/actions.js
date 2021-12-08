@@ -2,8 +2,6 @@ import * as types from './actionTypes.js';
 import SpotifyWebApi from 'spotify-web-api-node';
 import axios from 'axios';
 
-
-
 export const clearLocal = () => ({
    type: types.CLEAR_LOCAL
 })
@@ -53,7 +51,6 @@ export const createToken = (res) => async (dispatch) => {
    }
  }
 
- 
 export const searchResults = (search , accessToken) =>  (dispatch) => {
       //distpacho una action para que se genere un loader
       dispatch({

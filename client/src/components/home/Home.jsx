@@ -3,7 +3,9 @@ import { useSelector } from "react-redux";
 import UseAuth from '../../services/UseAuth.js';
 import Loader from '../loader/Loader.jsx';
 import Navbar from '../navbar/Navbar.jsx';
-import './home.css'
+import TrackCard from '../CardTracks/TrackCard.jsx';
+import './home.css';
+
 const Home = () => {
     //verifico si existe el token local 
     const accessTokenlocal = useSelector((state) => state.history.token) ;
@@ -14,7 +16,7 @@ const Home = () => {
     console.log(accessToken);
     //pregunto si hay resultados para luego hacer banderas y renderizar las cards
     const results = useSelector((state) => state.info)
-    
+    console.log(results.tracks)
     return (
         <React.Fragment>
 			<header>
@@ -28,10 +30,12 @@ const Home = () => {
             : 
             null
             }
+            { !results.tracks ? null :
+            results.tracks.map((track) => (
+                <TrackCard track={track}/>
+            ))
+            }
             </section>
-			{/* <section class="card">
-				<Card />
-			</section> */}
 		</React.Fragment>
     )
 }
