@@ -25,7 +25,9 @@ Back-End:
 
 1 paso : posicionarse en la carpeta ./api y desde la misma en la terminal ejecutar el comando:
 
-"npm i"
+```
+npm install
+```
 
 2 paso : desde la misma posicion crear un archivo con el nombre de ".env"
 
@@ -41,7 +43,9 @@ Front-End:
 
 1 paso : posicionarse en la carpeta ./client y desde la misma en la terminal ejecutar el comando:
 
-"npm i"
+```
+npm install
+```
 
 2 paso : desde la misma posicion crear un archivo con el nombre de ".env"
 
