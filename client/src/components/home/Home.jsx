@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import UseAuth from '../../services/UseAuth.js';
 import Loader from '../loader/Loader.jsx';
 import Navbar from '../navbar/Navbar.jsx';
-import TrackCard from '../CardTracks/TrackCard.jsx';
+import TrackCard from '../cardTracks/TrackCard.jsx';
 import AlbumCard from '../cardAlbum/AlbumCard.jsx';
 import ArtistCard from '../artistCard/ArtistCard.jsx';
 import Player from '../player/Player.jsx';
