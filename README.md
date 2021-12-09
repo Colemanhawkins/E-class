@@ -27,16 +27,15 @@ Back-End:
 
 "npm i"
 
-2 paso : desde la misma posicion crear un archivo con el nombre de "./env"
+2 paso : desde la misma posicion crear un archivo con el nombre de ".env"
 
 3 paso : dentro del mismo archivo vamos a colocar las siguienter variables de entorno
 
-"
+```
 REDIRECT_URI=http://localhost:3000
 CLIENT_ID=d775b5a7489346e6b8c3a149b6333ad1
 CLIENT_SECRET=96f377d20713458895f31e214e765247
-"
-sin las ocmillas por supuesto.
+```
 
 Front-End:
 
@@ -44,19 +43,19 @@ Front-End:
 
 "npm i"
 
-2 paso : desde la misma posicion crear un archivo con el nombre de "./env"
+2 paso : desde la misma posicion crear un archivo con el nombre de ".env"
 
 3 paso : dentro del mismo archivo vamos a colocar las siguienter variables de entorno
 
-"
+```
 REACT_APP_AUTH_URL=https://accounts.spotify.com/authorize?
 REACT_APP_CLIENT_ID=d775b5a7489346e6b8c3a149b6333ad1
 REACT_APP_RESPONSIVE_TYPE=code
 REACT_APP_REDIRECT_URI=http://localhost:3000
 REACT_APP_SCOPE=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state
 REACT_APP_BACK_END=http://localhost:3001
-"
-sin las ocmillas por supuesto.
+```
+
 
 
 la applicacion aun tiene cosas por ser exploradas como dar informacion a fondo de los albumnes y artistas que a su medido tiempo se lograra , como asi tambien tener su propio
