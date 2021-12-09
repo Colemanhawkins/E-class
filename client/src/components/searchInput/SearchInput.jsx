@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import './searchInput.css';
 import { useDispatch , useSelector} from "react-redux";
-import { searchResults } from '../../redux/actions/actions'
+import { searchResults } from '../../redux/actions/actions.js'
 import Swal from 'sweetalert2';
 
 const SearchInput = () => {

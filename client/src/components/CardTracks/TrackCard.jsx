@@ -1,5 +1,5 @@
 import albumNotFound from '../../images/albumNotFound.jpg';
-import { currentTrack  ,addTrackToHistory } from '../../redux/actions/actions';
+import { currentTrack  ,addTrackToHistory } from '../../redux/actions/actions.js';
 import { useDispatch , useSelector } from 'react-redux';
 import React from 'react';
 import './trackCard.css';
