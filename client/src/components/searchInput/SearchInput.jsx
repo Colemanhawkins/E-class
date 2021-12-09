@@ -8,7 +8,6 @@ const SearchInput = () => {
 //creo una funcion para validar
 const validateInput = (value) => {
 	//creo una funcion validadora
-  var regExp = /(\s{2,})/;
    if(value.length > 20) {
 		  setError('no debe tener mas de 20 caracteres')
 	  }
