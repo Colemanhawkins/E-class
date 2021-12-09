@@ -5,6 +5,8 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 dotenv.config();
 
+const PORT = process.env.PORT || 3001
+
 const server = express();
 
 server.use(cors());
@@ -16,8 +18,8 @@ server.use(express.urlencoded({ extended: false }));
 server.use('/', routes);
 
 
-server.listen(3001, () => {
-    console.log('..🦕.. listening at Port 3001 ..🦕..'); // eslint-disable-line no-console
+server.listen(PORT, () => {
+    console.log(`..🦕.. listening at Port ${PORT} ..🦕..`); // eslint-disable-line no-console
 });
 
 module.exports = server;
