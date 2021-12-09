@@ -1,9 +1,9 @@
 import React from 'react'
-import Navbar from '../navbar/Navbar';
-import Player from '../player/Player';
+import Navbar from '../navbar/Navbar.jsx';
+import Player from '../player/Player.jsx';
 import { useSelector } from "react-redux";
 import './history.css';
-import TrackCard from '../cardTracks/TrackCard';
+import TrackCard from '../cardTracks/TrackCard.jsx';
 
 const History = () => {
 
