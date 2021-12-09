@@ -9,7 +9,12 @@ const initialState = {
 }
 //reducer
 const historyReducer = (state = initialState , action) => {
-    switch (action.type) {    
+    switch (action.type) { 
+        case types.ADD_HISTORY_TRACK:
+            return{
+                ...state,
+                history: state.history.concat(action.payload)
+            }
         case types.CLEAR_LOCAL:
             return{
                 ...state,

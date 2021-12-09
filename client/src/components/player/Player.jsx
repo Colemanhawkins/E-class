@@ -18,7 +18,7 @@ const Player = ({ trackUri }) => {
         !accessToken ?  null : (
             <SpotifyPlayer
             token={accessToken}
-            uris={currentSong}
+            uris={currentSong ? currentSong : [] }
             callback={state =>{
              if (!state.isPlaying) setPlay(false)
             }}

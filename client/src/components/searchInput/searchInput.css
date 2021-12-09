@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
+
 body {
 	margin: 0;
 	padding: 0;
@@ -16,7 +18,7 @@ body {
 
 
 .search-btn {
-	color: rgb(51, 177, 62);
+	color: rgb(66, 197, 77);
 	float: right;
 	width: 20px;
 	height: 20px;
