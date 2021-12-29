@@ -6,7 +6,7 @@ Buenas , como estan? Sin mas procedere a comentar de que se trata este proyecto 
 Objetivo
 
 El objetivo de este proyecto y desafio era poder consumir , integrar y exponer el potencia que hay por detras de la api de spotify ,
-en el mismo se solicitaba poder mostrar canciones , albumnes y artistas como asi mismo tambien poder integras librerias de terceros para poder explorar y dar funcionalidades
+en el mismo se solicitaba poder mostrar canciones , albumes y artistas como asi mismo tambien poder integrar librerias de terceros para poder explorar y dar funcionalidades
 un poco revolucionarias como escuchar previews de canciones, al mismo tiempo poder darle un toque de funcionalidad local como hacer tu propio historial,validar ,testear,etc.
 
 Herramientas
